@@ -1,22 +1,23 @@
 from random import randint
 from turtle import Turtle, Screen, done, resetscreen, clearscreen
 
-from turtletest import flower
 
-#things to improve for racers - a countdown 1,2,3 go!  sort of thing!  more audience members?  making bets on the winner. 
+###NOTES###
+
 
 #TO DO Next 
 #Show off winner!!
 #what happens when a person has 0 money?
 #upload to Github
-#how to get rid of triangle turtle
+#things to improve for racers - a countdown 1,2,3 go!  sort of thing!  more audience members?  making bets on the winner. 
 
-# importing from turtletest is dirty.  loads 2 screens. exits out too early when 2 is selected.   
 
-# def main():
+
 
 
 #########   Program Starts Here   ###############
+
+
 
 #Screen Settings : 
 screen = Screen()
@@ -58,14 +59,14 @@ class RacingTurtle(Turtle):
         self.write("\n\n" + words, False, 'left',  ('Arial', 8, 'bold'))
 
 
-#### Game Code ####
+#### Main Game Code ####
 
 def main_menu():
     for x in screen.turtles():
         x.hideturtle()
     while 1 == True:
         print("1. Turtle Races")
-        answer = screen.numinput("What do you want to see?", "1. Turtle Racer\n 2. Spirals (Not Working Yet) \n Select an option", 1, minval=1, maxval=5)
+        answer = screen.numinput("What do you want to see?", "1. Turtle Racer\n Select an option", 1, minval=1, maxval=1)
         
         # answer = input("What do you want to see? ")
         if int(answer) == 1:
